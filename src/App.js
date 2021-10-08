@@ -1,9 +1,14 @@
-import React from "react";
-import Loader from "./components/Loader";
-import Paginate from "./components/Paginate";
+import React, { useEffect, useState } from "react";
+// import Loader from "./components/Loader";
+import Giphy from "./components/Giphy";
+// import Paginate from "./components/Paginate";
 
 function App() {
-  return <main></main>;
+  return (
+    <main>
+      <Giphy />
+    </main>
+  );
 }
 
 export default App;
