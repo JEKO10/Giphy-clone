@@ -5,3 +5,15 @@ body {
 .loader {
   color: red;
 }
+
+.containerT {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.gif {
+  padding: 0 3px;
+}
