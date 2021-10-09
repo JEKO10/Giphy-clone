@@ -17,3 +17,8 @@ body {
 .gif {
   padding: 0 5px;
 }
+
+input,
+button {
+  font-size: 3rem;
+}
