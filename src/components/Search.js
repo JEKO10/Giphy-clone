@@ -56,13 +56,13 @@ function Search(props) {
             props.func(true);
           }}
         >
-          Search
+          <img src="https://giphy.com/static/img/search-icon.svg" alt="IMG" />
         </button>
       </section>
       {props.state ? (
         <div className="container">
           {searchData.length === 0 ? (
-            <h1>No gifs for that search!</h1>
+            <h1 id="error">No gifs for that search!</h1>
           ) : (
             renderSearch()
           )}

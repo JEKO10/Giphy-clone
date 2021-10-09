@@ -1,5 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+}
+
 body {
   background-color: #121212;
+}
+
+h1 {
+  color: white;
+  font-size: 3rem;
+  padding: 20px;
+}
+
+input,
+button {
+  font-size: 2rem;
+  padding: 10px;
+  border: none;
+  outline: none;
+  margin: 1rem 0;
+}
+
+button {
+  background-color: #db549d;
+  cursor: pointer;
 }
 
 .loader {
@@ -18,11 +46,6 @@ body {
   padding: 0 5px;
 }
 
-input,
-button {
-  font-size: 3rem;
-}
-
-h1 {
+#error {
   color: red;
 }

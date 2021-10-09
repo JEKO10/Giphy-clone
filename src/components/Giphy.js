@@ -40,7 +40,12 @@ function Giphy() {
     });
   };
 
-  return <div className="container">{renderTrending()}</div>;
+  return (
+    <>
+      <h1>Trending</h1>
+      <div className="container">{renderTrending()}</div>;
+    </>
+  );
 }
 
 export default Giphy;
