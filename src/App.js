@@ -8,7 +8,7 @@ function App() {
   const [searched, setSearched] = useState(false);
   return (
     <main>
-      <Search func={setSearched} />
+      <Search func={setSearched} state={searched} />
       {searched ? null : <Giphy />}
     </main>
   );

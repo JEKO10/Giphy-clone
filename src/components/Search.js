@@ -18,7 +18,7 @@ function Search(props) {
         `${api.base}search?&api_key=${api.key}&q=${query}`
       );
       const data = await response.json();
-      console.log(data);
+      //   console.log(data);
       setSearchData(data.data);
       setIsLoading(false);
     } catch (err) {
@@ -59,7 +59,17 @@ function Search(props) {
           Search
         </button>
       </section>
-      <div className="container">{renderSearch()}</div>
+      {props.state ? (
+        <div className="container">
+          {searchData.length === 0 ? (
+            <h1>No gifs for that search!</h1>
+          ) : (
+            renderSearch()
+          )}
+        </div>
+      ) : (
+        ""
+      )}
     </div>
   );
 }
