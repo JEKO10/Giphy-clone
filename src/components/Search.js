@@ -1,33 +1,32 @@
 import React, { useState, useEffect } from "react";
-import Loader from "./Loader";
 
 const api = {
   base: "https://api.giphy.com/v1/gifs/",
   key: "Orrjo8OK56xS6F5tlU1dRG3fPzrO2agN",
 };
 
-function Giphy() {
-  const [trending, setTrending] = useState([]);
+function Search() {
+  const [searchData, setSearchData] = useState([]);
+  const [query, setQuery] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
-  const fetchTrending = async () => {
+  const fetchSearch = async () => {
     setIsLoading(true);
-    const response = await fetch(`${api.base}trending?api_key=${api.key}`);
+    const response = await fetch(
+      `${api.base}search?&api_key=${api.key}&q=ronaldo`
+    );
     const data = await response.json();
     console.log(data);
-    setTrending(data.data);
+    setSearchData(data.data);
     setIsLoading(false);
   };
 
   useEffect(() => {
-    fetchTrending();
+    fetchSearch();
   }, []);
 
-  const renderTrending = () => {
-    if (isLoading) {
-      return <Loader />;
-    }
-    return trending.map((item) => {
+  const renderSearch = () => {
+    return searchData.map((item) => {
       return (
         <div key={item.id} className="gif">
           <img src={item.images.fixed_height.url} alt="GIF" />
@@ -36,7 +35,7 @@ function Giphy() {
     });
   };
 
-  return <div className="container">{renderTrending()}</div>;
+  return <div className="container">{renderSearch()}</div>;
 }
 
-export default Giphy;
+export default Search;

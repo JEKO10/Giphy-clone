@@ -6,7 +6,7 @@ body {
   color: red;
 }
 
-.containerT {
+.container {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -15,5 +15,5 @@ body {
 }
 
 .gif {
-  padding: 0 3px;
+  padding: 0 5px;
 }
