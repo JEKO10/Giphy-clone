@@ -1,13 +1,15 @@
 import React from "react";
+import { useState } from "react/cjs/react.development";
 import Giphy from "./components/Giphy";
 import Search from "./components/Search";
 // import Paginate from "./components/Paginate";
 
 function App() {
+  const [searched, setSearched] = useState(false);
   return (
     <main>
-      <Search />
-      <Giphy />
+      <Search func={setSearched} />
+      {searched ? null : <Giphy />}
     </main>
   );
 }

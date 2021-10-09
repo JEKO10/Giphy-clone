@@ -11,12 +11,16 @@ function Giphy() {
   const [isLoading, setIsLoading] = useState(false);
 
   const fetchTrending = async () => {
-    setIsLoading(true);
-    const response = await fetch(`${api.base}trending?api_key=${api.key}`);
-    const data = await response.json();
-    console.log(data);
-    setTrending(data.data);
-    setIsLoading(false);
+    try {
+      setIsLoading(true);
+      const response = await fetch(`${api.base}trending?api_key=${api.key}`);
+      const data = await response.json();
+      console.log(data);
+      setTrending(data.data);
+      setIsLoading(false);
+    } catch (err) {
+      throw err;
+    }
   };
 
   useEffect(() => {
