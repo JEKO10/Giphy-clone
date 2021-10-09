@@ -1,1 +1,7 @@
+body {
+  background-color: #121212;
+}
 
+.loader {
+  color: red;
+}

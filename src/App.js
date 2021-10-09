@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from "react";
-// import Loader from "./components/Loader";
+import React from "react";
 import Giphy from "./components/Giphy";
 // import Paginate from "./components/Paginate";
 
