@@ -39,7 +39,7 @@ function Giphy() {
     return currentItems.map((item) => {
       return (
         <div key={item.id} className="gif">
-          <img src={item.images.fixed_height.url} alt="GIF" />
+          <img src={item.images.fixed_height_downsampled.url} alt="GIF" />
         </div>
       );
     });

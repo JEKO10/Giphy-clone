@@ -18,7 +18,6 @@ function Search(props) {
         `${api.base}search?&api_key=${api.key}&q=${query}`
       );
       const data = await response.json();
-      //   console.log(data);
       setSearchData(data.data);
       setIsLoading(false);
     } catch (err) {
@@ -33,7 +32,7 @@ function Search(props) {
     return searchData.map((item) => {
       return (
         <div key={item.id} className="gif">
-          <img src={item.images.fixed_height.url} alt="GIF" />
+          <img src={item.images.fixed_height_downsampled.url} alt="GIF" />
         </div>
       );
     });
