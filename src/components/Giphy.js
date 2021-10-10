@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Loader from "./Loader";
+import Paginate from "./Paginate";
 
 const api = {
   base: "https://api.giphy.com/v1/gifs/",
@@ -9,6 +10,10 @@ const api = {
 function Giphy() {
   const [trending, setTrending] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [itemsPage, setItemsPage] = useState(10);
+  const indexOfLast = currentPage * itemsPage;
+  const indexOfFirst = indexOfLast - itemsPage;
 
   const fetchTrending = async () => {
     try {
@@ -42,6 +47,11 @@ function Giphy() {
 
   return (
     <>
+      <Paginate
+        currentPage={currentPage}
+        itemsPer={itemsPage}
+        total={trending.length}
+      />
       <h1>Trending</h1>
       <div className="container">{renderTrending()}</div>;
     </>
