@@ -49,3 +49,26 @@ button {
 #error {
   color: red;
 }
+
+ul {
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+ul li {
+  font-size: 2rem;
+  text-align: center;
+  list-style-type: none;
+  padding: 0 20px;
+  border: 1px solid black;
+  margin: 0;
+}
+
+ul li a {
+  text-decoration: none;
+  color: blue;
+}
