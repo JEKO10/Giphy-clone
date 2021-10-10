@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/Giphy-recreate/static/css/main.64fc7b3c.chunk.css",
-    "main.js": "/Giphy-recreate/static/js/main.3f654e45.chunk.js",
-    "main.js.map": "/Giphy-recreate/static/js/main.3f654e45.chunk.js.map",
+    "main.js": "/Giphy-recreate/static/js/main.137098ed.chunk.js",
+    "main.js.map": "/Giphy-recreate/static/js/main.137098ed.chunk.js.map",
     "runtime-main.js": "/Giphy-recreate/static/js/runtime-main.718a2ea8.js",
     "runtime-main.js.map": "/Giphy-recreate/static/js/runtime-main.718a2ea8.js.map",
     "static/js/2.eb83d549.chunk.js": "/Giphy-recreate/static/js/2.eb83d549.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.718a2ea8.js",
     "static/js/2.eb83d549.chunk.js",
     "static/css/main.64fc7b3c.chunk.css",
-    "static/js/main.3f654e45.chunk.js"
+    "static/js/main.137098ed.chunk.js"
   ]
 }
