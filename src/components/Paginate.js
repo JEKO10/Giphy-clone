@@ -13,7 +13,14 @@ function Paginate(props) {
         {pageNumber.map((item) => {
           return (
             <li>
-              <a href="!#">{item}</a>
+              <a
+                onClick={() => {
+                  props.selectedPage(item);
+                }}
+                href="!#"
+              >
+                {item}
+              </a>
             </li>
           );
         })}

@@ -14,6 +14,7 @@ function Giphy() {
   const [itemsPage, setItemsPage] = useState(10);
   const indexOfLast = currentPage * itemsPage;
   const indexOfFirst = indexOfLast - itemsPage;
+  const currentItems = trending.slice(indexOfFirst, indexOfLast);
 
   const fetchTrending = async () => {
     try {
@@ -36,7 +37,7 @@ function Giphy() {
     if (isLoading) {
       return <Loader />;
     }
-    return trending.map((item) => {
+    return currentItems.map((item) => {
       return (
         <div key={item.id} className="gif">
           <img src={item.images.fixed_height.url} alt="GIF" />
@@ -45,12 +46,17 @@ function Giphy() {
     });
   };
 
+  const selectedPage = (pageNumber) => {
+    setCurrentPage(pageNumber);
+  };
+
   return (
     <>
       <Paginate
         currentPage={currentPage}
         itemsPer={itemsPage}
         total={trending.length}
+        selectedPage={selectedPage}
       />
       <h1>Trending</h1>
       <div className="container">{renderTrending()}</div>;

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Giphy from "./Giphy";
+import Loader from "./Loader";
 
 const api = {
   base: "https://api.giphy.com/v1/gifs/",
@@ -27,6 +27,9 @@ function Search(props) {
   };
 
   const renderSearch = () => {
+    if (isLoading) {
+      return <Loader />;
+    }
     return searchData.map((item) => {
       return (
         <div key={item.id} className="gif">
@@ -59,13 +62,15 @@ function Search(props) {
           <img src="https://giphy.com/static/img/search-icon.svg" alt="IMG" />
         </button>
       </section>
+
       {props.state ? (
         <div className="container">
           {searchData.length === 0 ? (
-            <h1 id="error">No gifs for that search!</h1>
+            <h1 id="error">Oops! There’s nothing here.</h1>
           ) : (
-            renderSearch()
+            ""
           )}
+          {renderSearch()}
         </div>
       ) : (
         ""
