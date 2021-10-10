@@ -32,7 +32,9 @@ function Search(props) {
     return searchData.map((item) => {
       return (
         <div key={item.id} className="gif">
-          <img src={item.images.fixed_height_downsampled.url} alt="GIF" />
+          <a href={item.images.fixed_height.url} target="__blank">
+            <img src={item.images.fixed_height_downsampled.url} alt="GIF" />
+          </a>
         </div>
       );
     });
