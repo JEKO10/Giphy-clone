@@ -1,5 +1,5 @@
 import React from "react";
-import { useState } from "react/cjs/react.development";
+import { useState } from "react";
 import Giphy from "./components/Giphy";
 import Search from "./components/Search";
 import Paginate from "./components/Paginate";

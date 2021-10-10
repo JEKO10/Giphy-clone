@@ -22,7 +22,7 @@ function Paginate(props) {
                 onClick={() => {
                   props.selectedPage(item);
                 }}
-                href="!#"
+                href="#"
               >
                 {item}
               </a>

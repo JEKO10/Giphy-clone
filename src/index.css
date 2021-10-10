@@ -18,7 +18,7 @@ h1 {
 
 input,
 button {
-  font-size: 2rem;
+  font-size: clamp(16px, 3vw, 32px);
   padding: 10px;
   border: none;
   outline: none;
@@ -28,6 +28,10 @@ button {
 button {
   background-color: #db549d;
   cursor: pointer;
+}
+
+button img {
+  width: clamp(16px, 3vw, 32px);
 }
 
 .loader {
@@ -46,6 +50,10 @@ button {
   padding: 0 5px;
 }
 
+.gif img {
+  max-width: 100%;
+}
+
 #error {
   color: #ff0000;
 }
@@ -60,12 +68,13 @@ ul {
 }
 
 ul li {
-  font-size: 2rem;
+  /* font-size: 2rem; */
   text-align: center;
   list-style-type: none;
   padding: 0 20px;
   border: 1px solid #000;
   margin: 0;
+  font-size: clamp(16px, 3vw, 32px);
 }
 
 ul li a {
@@ -76,4 +85,10 @@ ul li a {
 .active {
   color: #fff;
   background-color: #0000ff;
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    width: 100%;
+  }
 }
