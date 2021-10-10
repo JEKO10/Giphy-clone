@@ -11,9 +11,14 @@ function Paginate(props) {
     <section className="container">
       <ul className="pagination">
         {pageNumber.map((item) => {
+          let active = "";
+          if (item === props.currentPage) {
+            active += "active";
+          }
           return (
-            <li>
+            <li className={active}>
               <a
+                className={active}
                 onClick={() => {
                   props.selectedPage(item);
                 }}

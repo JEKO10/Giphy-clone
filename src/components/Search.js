@@ -65,7 +65,7 @@ function Search(props) {
 
       {props.state ? (
         <div className="container">
-          {searchData.length === 0 ? (
+          {!isLoading && searchData.length === 0 ? (
             <h1 id="error">Oops! There’s nothing here.</h1>
           ) : (
             ""

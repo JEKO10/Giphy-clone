@@ -31,7 +31,7 @@ button {
 }
 
 .loader {
-  color: red;
+  color: #ff0000;
 }
 
 .container {
@@ -47,11 +47,11 @@ button {
 }
 
 #error {
-  color: red;
+  color: #ff0000;
 }
 
 ul {
-  background-color: white;
+  background-color: #fff;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -64,11 +64,16 @@ ul li {
   text-align: center;
   list-style-type: none;
   padding: 0 20px;
-  border: 1px solid black;
+  border: 1px solid #000;
   margin: 0;
 }
 
 ul li a {
   text-decoration: none;
-  color: blue;
+  color: #0000ff;
+}
+
+.active {
+  color: #fff;
+  background-color: #0000ff;
 }
