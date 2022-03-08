@@ -1,9 +1,9 @@
 import React from "react";
 
-function Paginate(props) {
+function Paginate({ currentPage, itemsPer, selectedPage, total }) {
   const pageNumber = [];
 
-  for (let i = 1; i <= Math.ceil(props.total / props.itemsPer); i++) {
+  for (let i = 1; i <= Math.ceil(total / itemsPer); i++) {
     pageNumber.push(i);
   }
 
@@ -12,15 +12,15 @@ function Paginate(props) {
       <ul className="pagination">
         {pageNumber.map((item) => {
           let active = "";
-          if (item === props.currentPage) {
+          if (item === currentPage) {
             active += "active";
           }
           return (
-            <li className={active}>
+            <li className={active} key={item}>
               <a
                 className={active}
                 onClick={() => {
-                  props.selectedPage(item);
+                  selectedPage(item);
                 }}
                 href="#"
               >
