@@ -4,7 +4,7 @@ This project is made in React. This is my first time working with third party AP
 
 ## Used Technologies
 
-### `React` `CSS` `Giphy API` `GitHub Pages`
+### `React` `CSS` `Giphy API` `JSON` `GitHub Pages`
 
 ## Demo
 
