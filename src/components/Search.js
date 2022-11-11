@@ -49,12 +49,17 @@ function Search(props) {
           onChange={(e) => {
             setQuery(e.target.value);
           }}
+          onKeyDown={(e) => {
+            if (e.key === "Enter") {
+              fetchSearch();
+              setQuery("");
+            }
+          }}
           value={query}
         />
         <button
           type="submit"
-          onClick={(e) => {
-            e.preventDefault();
+          onClick={() => {
             fetchSearch();
             setQuery("");
             props.func(true);

@@ -6,6 +6,7 @@ import Paginate from "./components/Paginate";
 
 function App() {
   const [searched, setSearched] = useState(false);
+
   return (
     <main>
       <Search func={setSearched} state={searched} />
