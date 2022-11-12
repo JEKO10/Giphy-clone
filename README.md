@@ -17,7 +17,7 @@ One of my first projects created using React. This is my first time working with
 
 ## Project overview
 
-Home page is displaying trending gifs with searh bar. You can search plenty of gifs from Giphy. I used fetch and promises to get API data. I also created Loader and Pagination for gifs.
+Home page displays trending gifs with searh bar. You can search plenty of gifs from Giphy. I used fetch and promises to get API data. I also created Loader and Pagination for gifs.
 
 ## Built with
 
