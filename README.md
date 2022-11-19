@@ -13,11 +13,11 @@
 
 ## Project task
 
-One of my first projects created using React. This is my first time working with third party API. I used Giphy API to make Giphy clone.
+One of my first projects created using React. This is my first time working with third-party API. I used Giphy API to make a Giphy clone.
 
 ## Project overview
 
-Home page displays trending gifs with searh bar. You can search plenty of gifs from Giphy. I used fetch and promises to get API data. I also created Loader and Pagination for gifs.
+The home page displays trending gifs with a search bar. You can search for plenty of gifs from Giphy. I used fetch and promises to get API data. I also created Loader and Pagination for gifs.
 
 ## Built with
 
