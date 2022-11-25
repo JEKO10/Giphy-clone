@@ -13,7 +13,7 @@
 
 ## Project task
 
-One of my first projects created using React. This is my first time working with third-party API. I used Giphy API to make a Giphy clone.
+One of the first projects I created using React. This is my first time working with a third-party API. I used the Giphy API to make a Giphy clone.
 
 ## Project overview
 
